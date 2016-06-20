@@ -1,0 +1,80 @@
+{
+  "name": "user",
+  "base": "User",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "mobileNumber": {
+      "type": "number",
+      "required": true
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "status": {
+      "type": "number",
+      "default": 1
+    },
+    "credentials": false,
+    "challenges": false,
+    "lastUpdated": false
+  },
+  "options": {
+    "caseSensitiveEmail": false
+  },
+  "validations": [],
+  "relations": {
+    "country": {
+      "type": "belongsTo",
+      "model": "Country",
+      "foreignKey": "countryId"
+    },
+    "bookings": {
+      "type": "hasMany",
+      "model": "Booking",
+      "foreignKey": "customerId"
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "mixins": {
+    "Timestamp": true
+  }
+}

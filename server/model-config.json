@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "user": {
+    "dataSource": "dbDS",
+    "options": {
+      "emailVerificationRequired": false
+    }
+  },
+  "AccessToken": {
+    "dataSource": "dbDS",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "dbDS",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "dbDS",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "application": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "installation": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "notification": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "push": {
+    "dataSource": "pushDS",
+    "public": true
+  },
+  "Email": {
+    "dataSource": "localEmailDS",
+    "public": false
+  },
+  "Message": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "Country": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "Company": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "Vehicle": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "VehicleType": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "VehicleMapping": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "Booking": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "Favourite": {
+    "dataSource": "dbDS",
+    "public": true
+  },
+  "PredefinedLocation": {
+    "dataSource": "dbDS",
+    "public": true
+  }
+}

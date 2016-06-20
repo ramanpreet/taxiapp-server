@@ -1,0 +1,78 @@
+{
+  "name": "Booking",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "sourceLocation": {
+      "type": "geopoint",
+      "required": true
+    },
+    "destLocation": {
+      "type": "geopoint"
+    },
+    "sourceAddress": {
+      "type": "string",
+      "required": true
+    },
+    "destAddress": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "number"
+    },
+    "distance": {
+      "type": "number"
+    },
+    "startAt": {
+      "type": "date",
+      "required": true
+    },
+    "endAt": {
+      "type": "date"
+    },
+    "seatsNum": {
+      "type": "number",
+      "default": 1
+    },
+    "fare": {
+      "type": "number"
+    },
+    "cancelReason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "customerId"
+    },
+    "manager": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "managerId"
+    },
+    "vehicle": {
+      "type": "belongsTo",
+      "model": "Vehicle",
+      "foreignKey": "vehicleId"
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "mixins": {
+    "Timestamp": true
+  }
+}

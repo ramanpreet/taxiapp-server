@@ -1,0 +1,47 @@
+{
+  "name": "Company",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "mobileNumber": {
+      "type": "number"
+    },
+    "phoneNumber": {
+      "type": "number"
+    },
+    "fax": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "vehicles": {
+      "type": "hasMany",
+      "model": "Vehicle",
+      "foreignKey": "vehicleId"
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "mixins": {
+    "Timestamp": true
+  }
+}

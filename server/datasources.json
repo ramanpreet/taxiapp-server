@@ -1,0 +1,33 @@
+{
+  "memorydbDS": {
+    "name": "memorydbDS",
+    "connector": "memory"
+  },
+  "dbDS": {
+    "defaultForType": "mongodb",
+    "url": "mongodb://127.0.0.1:27017/taxiapp",
+    "name": "dbDS",
+    "connector": "mongodb"
+  },
+  "pushDS": {
+    "name": "pushDS",
+    "connector": "loopback-component-push",
+    "installation": "installation",
+    "notification": "notification",
+    "application": "application"
+  },
+  "localEmailDS": {
+    "name": "localEmailDS",
+    "defaultForType": "mail",
+    "connector": "mail",
+    "transports": [{
+      "type": "SMTP",
+      "host": "localhost",
+      "secure": false,
+      "port": 25,
+      "tls": {
+        "rejectUnauthorized": false
+      }
+    }]
+  }
+}

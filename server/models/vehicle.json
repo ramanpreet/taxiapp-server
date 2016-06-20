@@ -1,0 +1,62 @@
+{
+  "name": "Vehicle",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "registrationNo": {
+      "type": "string",
+      "required": true
+    },
+    "seatingCapacity": {
+      "type": "number",
+      "default": 4
+    },
+    "color": {
+      "type": "string",
+      "required": true
+    },
+    "maker": {
+      "type": "string",
+      "required": true
+    },
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "number",
+      "default": 1
+    },
+    "available": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "validations": [],
+  "relations": {
+    "vehicleType": {
+      "type": "belongsTo",
+      "model": "VehicleType",
+      "foreignKey": "typeId"
+    },
+    "country": {
+      "type": "belongsTo",
+      "model": "Country",
+      "foreignKey": "countryId"
+    },
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": "companyId"
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "mixins": {
+    "Timestamp": true
+  }
+}

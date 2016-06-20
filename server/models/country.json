@@ -1,0 +1,54 @@
+{
+  "name": "Country",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "iso": {
+      "type": "string",
+      "required": true,
+      "max": 2
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "max": 80
+    },
+    "niceName": {
+      "type": "string",
+      "required": true,
+      "max": 80
+    },
+    "iso3": {
+      "type": "string",
+      "required": true,
+      "max": 3
+    },
+    "numCode": {
+      "type": "number",
+      "required": true,
+      "max": 6
+    },
+    "phoneCode": {
+      "type": "number",
+      "required": true,
+      "max": 5
+    },
+    "currencyCode": {
+      "type": "string",
+      "required": true,
+      "max": 3
+    },
+    "currencySymbol": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

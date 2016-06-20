@@ -1,0 +1,30 @@
+{
+  "name": "VehicleMapping",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "available": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "validations": [],
+  "relations": {
+    "driver": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "driverId"
+    },
+    "vehicle": {
+      "type": "belongsTo",
+      "model": "Vehicle",
+      "foreignKey": "vehicleId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
